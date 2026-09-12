@@ -1,0 +1,65 @@
+[
+  {
+    "temaId": "fenomenos-naturales",
+    "titulo": "El Sol",
+    "descripcion": "El Sol ha sido relacionado con la vida, el paso del tiempo y el orden del mundo en distintas culturas.",
+    "imagen": "images/ilustraciones/sol-xilografia.jpg",
+    "alt": "Disco solar radiante sobre un horizonte."
+  },
+  {
+    "temaId": "fenomenos-naturales",
+    "titulo": "La Luna",
+    "descripcion": "La Luna se asoció con los ciclos, la medición del tiempo y las transformaciones visibles en el cielo nocturno.",
+    "imagen": "images/ilustraciones/luna-xilografia.jpg",
+    "alt": "Luna creciente rodeada de estrellas."
+  },
+  {
+    "temaId": "fenomenos-naturales",
+    "titulo": "Tormentas",
+    "descripcion": "El trueno, la lluvia y el rayo fueron interpretados como manifestaciones de fuerza, protección, orden o poder divino.",
+    "imagen": "images/ilustraciones/tormentas-xilografia.jpg",
+    "alt": "Nube de tormenta con un rayo y líneas de lluvia."
+  },
+  {
+    "temaId": "vida-muerte-origen",
+    "titulo": "La muerte",
+    "descripcion": "Las concepciones de la muerte organizaron despedidas, vínculos con los ancestros y distintos relatos sobre el más allá.",
+    "imagen": "images/ilustraciones/muerte-xilografia.jpg",
+    "alt": "Puerta de piedra y una vela encendida, ilustradas como xilografía monocromática."
+  },
+  {
+    "temaId": "vida-muerte-origen",
+    "titulo": "Los sueños",
+    "descripcion": "Los sueños fueron interpretados, según cada contexto, como mensajes, presagios o experiencias que requerían una lectura particular.",
+    "imagen": "images/ilustraciones/suenos-xilografia.jpg",
+    "alt": "Ojo cerrado del que surgen formas abstractas, ilustrado como xilografía monocromática."
+  },
+  {
+    "temaId": "vida-muerte-origen",
+    "titulo": "El origen del mundo",
+    "descripcion": "Los relatos de creación proponen relaciones entre las personas, la naturaleza y las fuerzas que dan forma al mundo.",
+    "imagen": "images/ilustraciones/origen-del-mundo-xilografia.jpg",
+    "alt": "Agua y cielo separándose para formar un paisaje, ilustrados como xilografía monocromática."
+  },
+  {
+    "temaId": "animales-naturaleza",
+    "titulo": "Animales simbólicos",
+    "descripcion": "Los animales pueden expresar poder, cuidado, peligro o espiritualidad. Su significado cambia según la cultura y el período histórico.",
+    "imagen": "images/ilustraciones/animales-xilografia.jpg",
+    "alt": "Cuervo posado sobre una rama desnuda, ilustrado como xilografía monocromática."
+  },
+  {
+    "temaId": "animales-naturaleza",
+    "titulo": "Árboles y plantas",
+    "descripcion": "Los árboles y plantas pueden representar vida, conocimiento, continuidad y la relación entre las personas y su entorno.",
+    "imagen": "images/ilustraciones/arboles-y-plantas-xilografia.jpg",
+    "alt": "Árbol con raíces visibles y hojas simples, ilustrado como xilografía monocromática."
+  },
+  {
+    "temaId": "animales-naturaleza",
+    "titulo": "Cuerpos celestes",
+    "descripcion": "Las estrellas, la Luna y las constelaciones fueron observadas como referencias para orientarse, medir el tiempo y construir relatos.",
+    "imagen": "images/ilustraciones/cuerpos-celestes-xilografia.jpg",
+    "alt": "Luna creciente, estrellas y una constelación simple, ilustradas como xilografía monocromática."
+  }
+]

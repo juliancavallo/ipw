@@ -1,30 +1,31 @@
 :root {
-    --color-fondo: #ebd6bfc4; /* e7e0d1 */
-    --color-superficie: #fffdf8;
-    --color-superficie-oscuro: #2c2920;
-    --color-texto-claro: #ececec;
-    --color-acento: #9e594ae3;
+    --background-color: #ebd6bfc4; /* e7e0d1 */
+    --surface-color: #fffdf8;
+    --dark-surface-color: #2c2920;
+    --light-text-color: #ececec;
+    --accent-color: #9e594ae3;
 }
 
 body{
-    background-color: var(--color-superficie-oscuro);
+    background-color: var(--dark-surface-color);
     font-family:  Georgia, "Times New Roman", serif ;
-    color: var(--color-superficie-oscuro);
+    color: var(--dark-surface-color);
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    padding: 10px 50px;
+    padding-left: 2rem;
+    padding-right: 2rem;
     height: 4rem;
-    font-size: 1.1rem;
+    border-bottom: 1px solid var(--surface-color);
 }
 
-.nav-subtitulo{
-    color: var(--color-texto-claro);
+.nav-subtitle{
+    color: var(--light-text-color);
     display: flex;
     align-items: center;
 }
@@ -47,11 +48,11 @@ body{
 
 .nav-item a{
     text-decoration: none;
-    color: var(--color-texto-claro);
+    color: var(--light-text-color);
 }
 
 .nav-item a:hover{
-    color: var(--color-acento);
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -60,7 +61,7 @@ section{
 }
 
 #inicio{
-    background-color: var(--color-fondo);
+    background-color: var(--background-color);
     padding: 5rem 5rem;
     font-size: 1.4rem;
     margin: 4rem;
@@ -72,61 +73,61 @@ section{
 }
 
 #explorar{
-    color: var(--color-texto-claro);
+    color: var(--light-text-color);
 }
 
-.temas{
+.topics{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
 }
 
-.tema{
+.topic{
     border-radius: 10px;
-    color: var(--color-superficie-oscuro);
-    background-color: var(--color-fondo);
+    color: var(--dark-surface-color);
+    background-color: var(--background-color);
     padding: 30px;
     display: block;
     text-decoration: none;
 }
 
-.tema:hover{
-    background-color: var(--color-acento);
-    color: var(--color-superficie);
+.topic:hover{
+    background-color: var(--accent-color);
+    color: var(--surface-color);
     transition: 0.3s;
     cursor: pointer;
 
 }
 
-.tema-detalle{
-    background-color: var(--color-fondo);
-    border: 1px solid var(--color-superficie-oscuro);
+.topic-detail{
+    background-color: var(--background-color);
+    border: 1px solid var(--dark-surface-color);
 }
 
 article{
     padding: 30px;
     margin: 50px;
-    background-color: var(--color-fondo);
-    border: 1px solid var(--color-superficie-oscuro);
+    background-color: var(--background-color);
+    border: 1px solid var(--dark-surface-color);
     border-radius: 10px;
 }
 
-.tema-detalle-grid{
+.topic-detail-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
 }
 
-.tema-detalle-item{
+.topic-detail-item{
     border-radius: 10px;
-    background-color: var(--color-superficie-oscuro);
+    background-color: var(--dark-surface-color);
     padding: 30px;
     display: block;
     text-decoration: none;
-    color: var(--color-texto-claro)
+    color: var(--light-text-color)
 }
 
-.tema-detalle-item img{
+.topic-detail-item img{
     display: block;
     width: 100%;
     max-width: 32rem;
@@ -135,11 +136,60 @@ article{
     border-radius: 6px;
 }
 
-.tema-detalle-item h3{
+.topic-detail-item h3{
     text-align: center;
 }
 
-.tema-detalle-item:hover{
-    background-color: var(--color-acento);
-    color: var(--color-superficie);
+.topic-detail-item:hover{
+    background-color: var(--accent-color);
+    color: var(--surface-color);
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+
+    .nav-subtitle {
+        display: none;
+    }
+
+    .nav-lista {
+        padding: 0;
+    }
+
+    section {
+        padding: 2.5rem 1.25rem;
+    }
+
+    #inicio {
+        margin: 1.25rem;
+        padding: 2.5rem 1.25rem;
+        font-size: 1.1rem;
+    }
+
+    article {
+        margin: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    .topics,
+    .topic-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .topic,
+    .topic-detail-item {
+        padding: 1.25rem;
+    }
 }
