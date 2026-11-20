@@ -51,7 +51,7 @@ body {
     margin: 0;
     background: var(--background-color);
     color: var(--dark-surface-color);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Tinos', 'Times New Roman', Times, serif;
     font-size: 1.2rem;
     line-height: 1.7;
 }

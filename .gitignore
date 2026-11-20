@@ -1,3 +1,4 @@
 # Capturas y comprobaciones locales; no forman parte del sitio.
 tmp/
 __pycache__/
+node_modules/

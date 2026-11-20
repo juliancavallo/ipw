@@ -1,0 +1,12 @@
+{
+  "name": "el-cielo-en-los-mitos",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "node scripts/build-css.cjs",
+    "check:css": "node scripts/build-css.cjs --check"
+  },
+  "devDependencies": {
+    "css-tree": "3.2.1"
+  }
+}

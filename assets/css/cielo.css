@@ -1,8 +1,4 @@
 /* La exposición conserva la paleta del sitio y sus páginas de lectura. */
-.sky-page {
-    font-family: 'Times New Roman', Times, serif;
-}
-
 .sky-page [hidden] {
     display: none;
 }
@@ -24,11 +20,6 @@
 .sky-page :focus-visible {
     outline: 3px solid var(--focus-color);
     outline-offset: 5px;
-}
-
-.sky-page .directory :focus-visible,
-.sky-page header :focus-visible {
-    outline-color: var(--focus-color);
 }
 
 .sky-page .chapter-heading h1,
@@ -57,21 +48,11 @@
 }
 
 .sky-page .navbar {
-    align-items: center;
     padding-block: 1.35rem;
 }
 
 .sky-page .nav-subtitle {
     font-size: 1.2rem;
-}
-
-.sky-page .nav-item {
-    font: 1rem/1.5 Arial, sans-serif;
-    padding: 0;
-}
-
-.sky-page .nav-item a {
-    padding: .6rem .65rem;
 }
 
 .sky-page .nav-item a[aria-current="page"] {
@@ -149,15 +130,6 @@
     text-align: left;
 }
 
-.sky-page #inicio h1::after {
-    display: none;
-}
-
-
-.sky-page #inicio .eyebrow {
-    font: 700 1rem/1.5 Arial, sans-serif;
-}
-
 .sky-page #inicio .hero-subtitle {
     font-size: clamp(1.2rem, 2vw, 1.65rem);
     line-height: 1.4;
@@ -208,16 +180,6 @@
     background: var(--selection-color);
 }
 
-.sky-page #inicio .hero-index {
-    font: 1rem/1.5 Arial, sans-serif;
-    letter-spacing: .1em;
-    margin-top: 2rem;
-}
-
-.hero-index span {
-    padding-inline: .5rem;
-}
-
 .intro-copy {
     color: var(--muted-text-color);
     font-size: 1.2rem;
@@ -256,11 +218,6 @@
     color: var(--accent-color);
 }
 
-.route-number {
-    font: 1rem Arial, sans-serif;
-    color: var(--gold-color);
-}
-
 .route h3 {
     font-size: 2rem;
     margin: .7rem 0;
@@ -277,6 +234,7 @@
 }
 
 .story-section {
+    border: 1px solid var(--border-color);
     background: var(--surface-color);
     margin: 2rem 4rem;
     padding: 3rem;
@@ -701,12 +659,13 @@ html:has(#art-dialog[open]) {
     background: var(--surface-color);
 }
 
-.culture-card h2 {
-    font-size: 1.65rem;
-}
-
 .culture-card a {
     color: var(--accent-color);
+}
+
+/* Fondos estables y columnas de lectura acotadas para reducir el esfuerzo visual. */
+.sky-page .directory {
+    padding: 2rem 4rem;
 }
 
 @media (max-width: 1000px) {
@@ -733,9 +692,6 @@ html:has(#art-dialog[open]) {
         gap: 1.5rem;
     }
 
-    .sky-page .nav-subtitle {
-        display: flex;
-    }
 }
 
 @media (max-width: 650px) {
@@ -766,10 +722,6 @@ html:has(#art-dialog[open]) {
         color: var(--dark-surface-color);
         font: 1rem/1.2 Arial, sans-serif;
         cursor: pointer;
-    }
-
-    .sky-page .theme-toggle:not([hidden]) {
-        display: inline-flex;
     }
 
     .sky-page .navbar.has-toggle .nav-list {
@@ -859,7 +811,7 @@ html:has(#art-dialog[open]) {
         width: 9rem;
     }
 
-    .story h3 {
+    .sky-page .story h2 {
         font-size: 1.65rem;
     }
 
@@ -868,7 +820,7 @@ html:has(#art-dialog[open]) {
     }
 
     .sky-page .directory {
-        padding: 2.5rem 1.25rem;
+        padding: 2rem 1.25rem;
     }
 
     .back-to-top {
@@ -892,25 +844,10 @@ html:has(#art-dialog[open]) {
 
 }
 
-/* Fondos estables y columnas de lectura acotadas para reducir el esfuerzo visual. */
-.sky-page .directory {
-    padding: 2rem 4rem;
-}
-
-.story-section {
-    border: 1px solid var(--border-color);
-}
-
 .art-open:focus-visible {
     outline-offset: -5px;
 }
 
 #art-dialog :focus-visible {
     outline-color: #e7bba1;
-}
-
-@media (max-width: 650px) {
-    .sky-page .directory {
-        padding: 2rem 1.25rem;
-    }
 }

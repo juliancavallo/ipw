@@ -1,0 +1,152 @@
+{
+  "htmlService": "https://validator.w3.org/nu/",
+  "cssService": "https://jigsaw.w3.org/css-validator/",
+  "html": [
+    {
+      "file": "index.html",
+      "sha256": "5a7399a8bc6d67713665b2f6244c5a0d13494f99a963c9fb8f4c21a6dfd69842",
+      "status": 200,
+      "errors": [],
+      "warnings": [],
+      "messages": []
+    },
+    {
+      "file": "pages/culturas.html",
+      "sha256": "2552cda835d198ab4d5ca6a119878b3da7a7ab690484d02c136b12f47506adb5",
+      "status": 200,
+      "errors": [],
+      "warnings": [],
+      "messages": []
+    },
+    {
+      "file": "pages/eclipses.html",
+      "sha256": "ffcedfda4d5c11991195b2f2d3aa2928b0dddc245c95b191e3c45e3ae0f9f2c7",
+      "status": 200,
+      "errors": [],
+      "warnings": [],
+      "messages": []
+    },
+    {
+      "file": "pages/glosario.html",
+      "sha256": "60263f4116ffde15894ee83f7d402ddcbec0d1a8e5a04c065c8606bb7b179f47",
+      "status": 200,
+      "errors": [],
+      "warnings": [],
+      "messages": []
+    },
+    {
+      "file": "pages/luna.html",
+      "sha256": "c15a2a218dff0d18c55e05a9a28861f58fcab9efeedf2ee8e3c9509ee10c415d",
+      "status": 200,
+      "errors": [],
+      "warnings": [],
+      "messages": []
+    },
+    {
+      "file": "pages/sol.html",
+      "sha256": "d934f9f88b49fd11380547553bdf0fbbbbc789b856d7aa842dab8f7b5e25d74b",
+      "status": 200,
+      "errors": [],
+      "warnings": [],
+      "messages": []
+    }
+  ],
+  "css": [
+    {
+      "file": "assets/css/fonts.css",
+      "sha256": "cc2df1e52df29bb770f168a8e7766c1cc54b5510aaec3fce60de588c03e7bffb",
+      "profile": "css3svg",
+      "valid": true,
+      "errors": 0,
+      "warnings": 15,
+      "warningMessages": [
+        "Redefinition of “font-family”",
+        "Redefinition of “font-style”",
+        "Redefinition of “font-weight”",
+        "Redefinition of “font-display”",
+        "Redefinition of “src”"
+      ]
+    },
+    {
+      "file": "assets/css/styles.css",
+      "sha256": "b57a5bd74b94a229b67b6c173dba4267d45bc85501602f72216638dc12da2199",
+      "profile": "css3svg",
+      "valid": true,
+      "errors": 0,
+      "warnings": 9,
+      "warningMessages": [
+        "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+        "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+        "Redefinition of “scroll-behavior”"
+      ]
+    },
+    {
+      "file": "assets/css/cielo.css",
+      "sha256": "35882234195d11c288105a476797781ede5493a87c513add869556935b277129",
+      "profile": "css3svg",
+      "valid": true,
+      "errors": 0,
+      "warnings": 158,
+      "warningMessages": [
+        "Due to their dynamic nature, CSS variables are currently not statically checked",
+        "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+        "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+        "Redefinition of “padding-right”",
+        "Redefinition of “gap”",
+        "Redefinition of “margin-bottom”",
+        "Redefinition of “margin-left”",
+        "Redefinition of “margin-top”",
+        "Redefinition of “margin-right”",
+        "Redefinition of “padding-bottom”",
+        "Redefinition of “padding-left”",
+        "Redefinition of “padding-top”",
+        "Redefinition of “height”",
+        "Redefinition of “grid-template-columns”",
+        "Redefinition of “font-size”",
+        "Redefinition of “border-top”",
+        "Redefinition of “right”",
+        "Redefinition of “bottom”",
+        "Redefinition of “border-top-width”",
+        "Redefinition of “column-gap”",
+        "Redefinition of “row-gap”"
+      ]
+    },
+    {
+      "file": "assets/css/site.min.css",
+      "sha256": "f1c780a76249ce52256c53a2d7f8353c15e8c49cda7c3a432d2178282c05f0ee",
+      "profile": "css3svg",
+      "valid": true,
+      "errors": 0,
+      "warnings": 152,
+      "warningMessages": [
+        "Redefinition of “font-family”",
+        "Redefinition of “font-style”",
+        "Redefinition of “font-weight”",
+        "Redefinition of “font-display”",
+        "Redefinition of “src”",
+        "Redefinition of “scroll-behavior”",
+        "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+        "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+        "Redefinition of “padding-right”",
+        "Redefinition of “gap”",
+        "Redefinition of “margin-bottom”",
+        "Redefinition of “margin-left”",
+        "Redefinition of “margin-top”",
+        "Redefinition of “margin-right”",
+        "Redefinition of “padding-bottom”",
+        "Redefinition of “padding-left”",
+        "Redefinition of “padding-top”",
+        "Redefinition of “height”",
+        "Redefinition of “grid-template-columns”",
+        "Redefinition of “font-size”",
+        "Redefinition of “border-top”",
+        "Redefinition of “right”",
+        "Redefinition of “bottom”",
+        "Redefinition of “border-top-width”",
+        "Redefinition of “column-gap”",
+        "Redefinition of “row-gap”"
+      ]
+    }
+  ],
+  "hashNormalization": "UTF-8 text with CRLF normalized to LF"
+}
