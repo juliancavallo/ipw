@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <script>
+            // Aplicar el tema guardado antes del primer renderizado.
+            try {
+                document.documentElement.dataset.theme =
+                    localStorage.getItem('cielo-theme') === 'dark' ? 'dark' : 'light';
+            } catch {
+                // Conservar el tema claro si el almacenamiento está bloqueado.
+            }
+        </script>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="author" content="Julián Cavallo" />
+        <meta
+            name="description"
+            content="Glosario de conceptos sobre mitos, arte y astronomía."
+        />
+        <meta name="keywords" content="mitología, Sol, Luna, eclipses, arte" />
+        <title>Glosario · El cielo en los mitos y el arte</title>
+        <link
+            rel="icon"
+            href="../assets/images/cielo-icono.svg"
+            type="image/svg+xml"
+        />
+        <link rel="stylesheet" href="../assets/css/styles.css" />
+        <link rel="stylesheet" href="../assets/css/cielo.css" />
+        <script src="../assets/js/app.js" defer></script>
+    </head>
+    <body id="top" class="sky-page">
+        <a class="skip-link" href="#contenido" title="Saltar al contenido"
+            >Saltar al contenido</a
+        >
+        <header>
+            <nav class="navbar" aria-label="Navegación principal">
+                <a
+                    class="nav-subtitle"
+                    href="../index.html"
+                    title="El cielo en los mitos y el arte"
+                    >El cielo en los mitos y el arte</a
+                >
+                <div class="nav-actions">
+                    <button
+                        class="nav-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        hidden
+                    >
+                        Menú
+                    </button>
+                    <button
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Alternar entre tema claro y oscuro"
+                        title="Alternar tema"
+                        aria-pressed="false"
+                        hidden
+                    >
+                        <span
+                            class="theme-icon theme-icon-sun"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                            >
+                                <circle cx="12" cy="12" r="4" />
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+                                />
+                            </svg>
+                        </span>
+                        <span
+                            class="theme-icon theme-icon-moon"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M20.4 15.5A8.5 8.5 0 0 1 8.5 3.6 8.5 8.5 0 1 0 20.4 15.5Z"
+                                />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <ul class="nav-list" id="primary-navigation">
+                    <li class="nav-item">
+                        <a href="../index.html" title="Inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sol.html" title="Sol">Sol</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="luna.html" title="Luna">Luna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="eclipses.html" title="Eclipses">Eclipses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="culturas.html" title="El cielo en las culturas"
+                            >Culturas</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="glosario.html"
+                            title="Glosario"
+                            aria-current="page"
+                            >Glosario</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#actividad" title="Actividad"
+                            >Actividad</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#fuentes" title="Fuentes"
+                            >Fuentes</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="contenido">
+            <section
+                class="directory project-sources"
+                aria-labelledby="glossary-title"
+            >
+                <p class="eyebrow">Consulta</p>
+                <h1 id="glossary-title">Glosario</h1>
+                <p class="intro-copy">
+                    Conceptos para leer los relatos, observar las obras y
+                    entender sus fichas.
+                </p>
+                <dl class="glossary-list">
+                    <dt id="eclipse-solar">Eclipse solar</dt>
+                    <dd>
+                        Fenómeno en el que la Luna pasa entre el Sol y la Tierra
+                        y oculta, total o parcialmente, el disco solar desde
+                        algunos lugares.
+                    </dd>
+                    <dt id="eclipse-lunar">Eclipse lunar</dt>
+                    <dd>
+                        Fenómeno en el que la Tierra se interpone entre el Sol y
+                        la Luna, y su sombra oscurece la superficie lunar.
+                    </dd>
+                    <dt id="estampa">Estampa</dt>
+                    <dd>
+                        Imagen impresa a partir de una matriz, como una plancha
+                        de madera o metal. La xilografía utiliza una matriz de
+                        madera.
+                    </dd>
+                    <dt id="iconografia">Iconografía</dt>
+                    <dd>
+                        Figuras y símbolos representados en una obra y las ideas
+                        o relatos con los que se relacionan.
+                    </dd>
+                    <dt id="mito">Mito</dt>
+                    <dd>
+                        Relato tradicional que transmite explicaciones, valores
+                        o ideas de una comunidad sobre el mundo y sus orígenes.
+                    </dd>
+                    <dt id="observacion">Observación astronómica</dt>
+                    <dd>
+                        Registro atento de los astros y sus cambios. Algunas
+                        obras representan eclipses observados por sus autores.
+                    </dd>
+                    <dt id="relieve">Relieve</dt>
+                    <dd>
+                        Escultura en la que las figuras sobresalen de una
+                        superficie de fondo.
+                    </dd>
+                    <dt id="representacion">Representación</dt>
+                    <dd>
+                        Modo en que una imagen muestra o evoca un tema. El Sol
+                        puede aparecer como disco, divinidad o efecto de luz.
+                    </dd>
+                    <dt id="dominio-publico">Dominio público</dt>
+                    <dd>
+                        Condición que permite usar una obra sin las
+                        restricciones habituales de derechos de autor. Cada
+                        ficha informa fuente y condiciones de uso.
+                    </dd>
+                </dl>
+            </section>
+        </main>
+        <a class="back-to-top" href="#top" hidden>Volver arriba ↑</a>
+        <footer>
+            <p>El cielo en los mitos y el arte · Julián Cavallo · UAI · 2026</p>
+        </footer>
+    </body>
+</html>

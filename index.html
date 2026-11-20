@@ -1,40 +1,634 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Por qué creemos en esto?</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <span class="nav-subtitle">Mitos, símbolos y explicaciones del mundo</span>
-            <ul class="nav-lista">
-                <li class="nav-item"><a href="#explorar">Explorar temas</a></li>
-            </ul> 
-        </nav>
-    </header>
+<!doctype html>
+<html lang="es" data-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <script>
+            // Aplicar el tema guardado antes del primer renderizado.
+            try {
+                document.documentElement.dataset.theme =
+                    localStorage.getItem('cielo-theme') === 'dark' ? 'dark' : 'light';
+            } catch {
+                // Conservar el tema claro si el almacenamiento está bloqueado.
+            }
+        </script>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="author" content="Julián Cavallo" />
+        <meta
+            name="description"
+            content="Introducción, actividad y fuentes de la exposición."
+        />
+        <meta name="keywords" content="mitología, Sol, Luna, eclipses, arte" />
+        <title>Inicio · El cielo en los mitos y el arte</title>
+        <link
+            rel="icon"
+            href="assets/images/cielo-icono.svg"
+            type="image/svg+xml"
+        />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/css/cielo.css" />
+        <script src="assets/js/app.js" defer></script>
+    </head>
 
-    <section id="inicio">
-        <h1>¿Por qué creemos en esto?</h1>
-        <strong>Las sociedades han creado relatos, símbolos y rituales para pensar aquello que no podían controlar: el clima, la muerte, los sueños y el origen del mundo.</strong>
-        <p>Estas historias no fueron solamente intentos de explicar lo desconocido: también ayudaron a transmitir valores, organizar la vida colectiva y construir identidades.
-            Un mismo fenómeno puede adquirir sentidos diferentes según el lugar, el período y las prácticas de cada comunidad.</p>
-        <p>La propuesta invita a observar esas diferencias con curiosidad y a evitar comparaciones simplificadas.</p>
-    </section>
+    <body id="top" class="sky-page">
+        <a class="skip-link" href="#contenido" title="Saltar al contenido"
+            >Saltar al contenido</a
+        >
+        <header>
+            <nav class="navbar" aria-label="Navegación principal">
+                <a
+                    class="nav-subtitle"
+                    href="index.html"
+                    title="El cielo en los mitos y el arte"
+                    >El cielo en los mitos y el arte</a
+                >
+                <div class="nav-actions">
+                    <button
+                        class="nav-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        hidden
+                    >
+                        Menú
+                    </button>
+                    <button
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Alternar entre tema claro y oscuro"
+                        title="Alternar tema"
+                        aria-pressed="false"
+                        hidden
+                    >
+                        <span
+                            class="theme-icon theme-icon-sun"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                            >
+                                <circle cx="12" cy="12" r="4" />
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+                                />
+                            </svg>
+                        </span>
+                        <span
+                            class="theme-icon theme-icon-moon"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M20.4 15.5A8.5 8.5 0 0 1 8.5 3.6 8.5 8.5 0 1 0 20.4 15.5Z"
+                                />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <ul class="nav-list" id="primary-navigation">
+                    <li class="nav-item">
+                        <a href="index.html" title="Inicio" aria-current="page"
+                            >Inicio</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/sol.html" title="Sol">Sol</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/luna.html" title="Luna">Luna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/eclipses.html" title="Eclipses"
+                            >Eclipses</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="pages/culturas.html"
+                            title="El cielo en las culturas"
+                            >Culturas</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/glosario.html" title="Glosario"
+                            >Glosario</a
+                        >
+                    </li>
 
-    <section id="explorar">
-        <h2>Explorar los temas</h2>
-        <div class="topics"></div>
-    </section>
-
-    <main id="topic-details"></main>
-
-    <footer>
-        <p>&copy; Julián Cavallo - 2026</p>
-    </footer>
-
-    <script type="module" src="script.js"></script>
-</body>
+                    <li class="nav-item">
+                        <a href="index.html#actividad" title="Actividad"
+                            >Actividad</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#fuentes" title="Fuentes">Fuentes</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="contenido">
+            <section id="inicio" class="sky-hero" aria-labelledby="titulo">
+                <div>
+                    <h1 id="titulo">El cielo en los mitos y el arte</h1>
+                    <p class="hero-subtitle">
+                        El Sol, la Luna y los eclipses en distintas tradiciones
+                        y obras visuales.
+                    </p>
+                    <p>
+                        Esta página presenta seis relatos y doce obras de arte.
+                        Recorre tres temas y propone observar cómo distintas
+                        comunidades representaron los astros y los eclipses.
+                    </p>
+                </div>
+                <figure class="hero-print">
+                    <img
+                        src="assets/images/ilustraciones/cuerpos-celestes-xilografia.jpg"
+                        width="1100"
+                        height="1100"
+                        alt="Luna creciente, estrellas y una constelación en estilo de grabado."
+                    />
+                </figure>
+            </section>
+            <section
+                id="introduccion"
+                class="directory introduction"
+                aria-labelledby="intro-titulo"
+            >
+                <p class="eyebrow">Introducción</p>
+                <h2 id="intro-titulo">El cielo como tema y representación</h2>
+                <p class="intro-copy">
+                    El Sol, la Luna y los eclipses aparecen en relatos y obras
+                    de distintas épocas y lugares. La página presenta dos
+                    relatos por tema y cuatro obras visuales para cada uno. Las
+                    galerías incluyen pinturas, relieves, estampas e
+                    ilustraciones científicas. Los ejemplos permiten comparar
+                    formas de representación sin suponer que todas las
+                    tradiciones compartían las mismas ideas.
+                </p>
+                <p class="intro-copy">
+                    En los relatos, los astros pueden ser
+                    <strong
+                        >divinidades, personajes o fuerzas de la
+                        naturaleza</strong
+                    >. Las historias de Faetón, Amaterasu, Selene, Chang’e, Rahu
+                    y el dragón chino muestran maneras distintas de explicar la
+                    luz, la oscuridad y los cambios del cielo.
+                </p>
+                <p class="intro-copy">
+                    Las obras invitan a observar
+                    <strong>cómo se representa la luz</strong>: en un disco
+                    dorado, un paisaje nocturno o una pintura de un eclipse
+                    observado. Cada imagen incluye datos de procedencia y un
+                    enlace a su colección para que puedas conocer más sobre su
+                    contexto.
+                </p>
+                <div class="route-grid">
+                    <a
+                        class="route"
+                        href="pages/sol.html"
+                        title="El Sol · relatos y obras"
+                    >
+                        <h3>El Sol</h3>
+                        <p>Relatos y representaciones solares</p>
+                        <span>Ir a la sección ↗</span> </a
+                    ><a
+                        class="route"
+                        href="pages/luna.html"
+                        title="La Luna · relatos y obras"
+                    >
+                        <h3>La Luna</h3>
+                        <p>Relatos y representaciones lunares</p>
+                        <span>Ir a la sección ↗</span> </a
+                    ><a
+                        class="route"
+                        href="pages/eclipses.html"
+                        title="Los eclipses · relatos y obras"
+                    >
+                        <h3>Los eclipses</h3>
+                        <p>Relatos, arte y astronomía</p>
+                        <span>Ir a la sección ↗</span>
+                    </a>
+                </div>
+                <p class="editorial-note">
+                    Las ilustraciones grabadas acompañan las explicaciones. Las
+                    galerías presentan obras históricas con sus fuentes y
+                    créditos.
+                </p>
+            </section>
+            <section
+                id="actividad"
+                class="story-section"
+                aria-labelledby="actividad-titulo"
+            >
+                <p class="eyebrow">Actividad</p>
+                <h2 id="actividad-titulo">Preguntas sobre las obras</h2>
+                <p>Respondé las tres preguntas y consultá las explicaciones.</p>
+                <!-- La validación nativa exige una respuesta por grupo; JS explica el resultado. -->
+                <form id="quiz">
+                    <fieldset>
+                        <legend>1. ¿Qué muestra la obra de Rosetsu?</legend>
+                        <label for="rosetsu-moon"
+                            ><input
+                                type="radio"
+                                name="rosetsu"
+                                value="moon"
+                                required
+                                id="rosetsu-moon"
+                                aria-describedby="feedback-rosetsu"
+                            />
+                            Un paisaje iluminado por la Luna.</label
+                        ><label for="rosetsu-chariot"
+                            ><input
+                                type="radio"
+                                name="rosetsu"
+                                value="chariot"
+                                id="rosetsu-chariot"
+                                aria-describedby="feedback-rosetsu"
+                            />
+                            Un carro solar.</label
+                        ><label for="rosetsu-eclipse"
+                            ><input
+                                type="radio"
+                                name="rosetsu"
+                                value="eclipse"
+                                id="rosetsu-eclipse"
+                                aria-describedby="feedback-rosetsu"
+                            />
+                            Un eclipse solar.</label
+                        >
+                        <p
+                            class="answer-feedback"
+                            id="feedback-rosetsu"
+                            aria-live="polite"
+                        ></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            2. ¿Qué ilumina el río en la escena nocturna de
+                            Turner?
+                        </legend>
+                        <label for="turner-moon"
+                            ><input
+                                type="radio"
+                                name="turner"
+                                value="moon"
+                                required
+                                id="turner-moon"
+                                aria-describedby="feedback-turner"
+                            />
+                            La Luna y las antorchas de los trabajadores.</label
+                        ><label for="turner-storm"
+                            ><input
+                                type="radio"
+                                name="turner"
+                                value="storm"
+                                id="turner-storm"
+                                aria-describedby="feedback-turner"
+                            />
+                            Una tormenta.</label
+                        ><label for="turner-eclipse"
+                            ><input
+                                type="radio"
+                                name="turner"
+                                value="eclipse"
+                                id="turner-eclipse"
+                                aria-describedby="feedback-turner"
+                            />
+                            Un eclipse.</label
+                        >
+                        <p
+                            class="answer-feedback"
+                            id="feedback-turner"
+                            aria-live="polite"
+                        ></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>3. ¿Qué representa la obra de Butler?</legend>
+                        <label for="eclipse-observed"
+                            ><input
+                                type="radio"
+                                name="eclipse"
+                                value="observed"
+                                required
+                                id="eclipse-observed"
+                                aria-describedby="feedback-eclipse"
+                            />
+                            Un eclipse observado y registrado.</label
+                        ><label for="eclipse-deity"
+                            ><input
+                                type="radio"
+                                name="eclipse"
+                                value="deity"
+                                id="eclipse-deity"
+                                aria-describedby="feedback-eclipse"
+                            />
+                            La divinidad Rahu.</label
+                        ><label for="eclipse-moon"
+                            ><input
+                                type="radio"
+                                name="eclipse"
+                                value="moon"
+                                id="eclipse-moon"
+                                aria-describedby="feedback-eclipse"
+                            />
+                            Un eclipse visto desde la Luna.</label
+                        >
+                        <p
+                            class="answer-feedback"
+                            id="feedback-eclipse"
+                            aria-live="polite"
+                        ></p>
+                    </fieldset>
+                    <div class="quiz-actions" hidden>
+                        <button class="button" type="submit">Comprobar</button
+                        ><button class="button button-secondary" type="reset">
+                            Reiniciar
+                        </button>
+                    </div>
+                    <p id="quiz-result" role="status" aria-live="polite"></p>
+                </form>
+                <noscript>
+                    <p>
+                        Activá JavaScript para corregir automáticamente las
+                        respuestas.
+                    </p>
+                </noscript>
+            </section>
+            <section
+                id="fuentes"
+                class="directory project-sources"
+                aria-labelledby="fuentes-titulo"
+            >
+                <p class="eyebrow">Proyecto y fuentes</p>
+                <h2 id="fuentes-titulo">Acerca de esta página</h2>
+                <p class="intro-copy">
+                    Exposición digital de Julián Cavallo para Introducción a la
+                    Programación Web, UAI, 2026. Presenta seis relatos sobre el
+                    Sol, la Luna y los eclipses junto con doce obras visuales.
+                    Los textos sintetizan las fuentes enlazadas. Las
+                    ilustraciones grabadas son del proyecto y se identifican
+                    como tales. Cada obra incluye procedencia, crédito,
+                    condiciones de uso y enlace a su colección.
+                </p>
+                <details>
+                    <summary>Bibliografía</summary>
+                    <ul class="source-list">
+                        <li>
+                            <a
+                                href="https://www.nga.gov/artworks/71349-fall-phaeton"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="National Gallery of Art: Faetón"
+                                >National Gallery of Art: Faetón</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://d-museum.kokugakuin.ac.jp/eos/detail/?id=9440"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Universidad Kokugakuin: Amaterasu"
+                                >Universidad Kokugakuin: Amaterasu</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.metmuseum.org/art/collection/search/254590"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="The Met: Selene y Endimión"
+                                >The Met: Selene y Endimión</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://pages.uoregon.edu/jsmacollections/home/artists/yoshitoshi-tsukioka-1839---1892-/chang-e-flees-to-the-moon.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Colección Lavenberg: Chang’e"
+                                >Colección Lavenberg: Chang’e</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://blogs.loc.gov/folklife/2017/08/solar-eclipse-awe-wonder-and-belief/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Biblioteca del Congreso: eclipses"
+                                >Biblioteca del Congreso: eclipses</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://idp.bl.uk/discover/learning/chinese-astronomy/articles/the-chinese-sky/the-sun-and-moon/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="British Library: cielo chino"
+                                >British Library: cielo chino</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://science.nasa.gov/eclipses/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="NASA: eclipses"
+                                >NASA: eclipses</a
+                            >
+                        </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Créditos y licencias de las obras</summary>
+                    <ol id="art-credits">
+                        <li>
+                            <strong
+                                >Disco solar — Artista no identificado.</strong
+                            >
+                            The Met, Gift of Mr. and Mrs. Nathan Cummings, 1964;
+                            64.228.761. Open Access.
+                            <a
+                                title="Condiciones de uso: Disco solar"
+                                href="https://www.metmuseum.org/policies/image-resources"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >CC0 — dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong>Grulla y Sol — Escuela de Hokusai.</strong>
+                            The Met, Fletcher Fund, 1938; 38.106.1. Open Access.
+                            <a
+                                title="Condiciones de uso: Grulla y Sol"
+                                href="https://www.metmuseum.org/policies/image-resources"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >CC0 — dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong>Amanecer — George Inness.</strong> The Met,
+                            Anonymous Gift, in memory of Emil Thiele, 1954;
+                            54.156. Open Access.
+                            <a
+                                title="Condiciones de uso: Amanecer"
+                                href="https://www.metmuseum.org/policies/image-resources"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >CC0 — dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong
+                                >El Sol saliendo entre la bruma — Joseph Mallord
+                                William Turner.</strong
+                            >
+                            Joseph Mallord William Turner, Sun Rising through
+                            Vapour, NG479. Reproducción digital: The Yorck
+                            Project / Wikimedia Commons.
+                            <a
+                                title="Condiciones de uso: El Sol saliendo entre la bruma"
+                                href="https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_049.jpg"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Dominio público (CC-PD-Mark)</a
+                            >.
+                        </li>
+                        <li>
+                            <strong
+                                >Paisaje a la luz de la Luna — Nagasawa
+                                Rosetsu.</strong
+                            >
+                            The Met, Gift of Rosemarie and Leighton Longhi,
+                            2020; 2020.392. Open Access.
+                            <a
+                                title="Condiciones de uso: Paisaje a la luz de la Luna"
+                                href="https://www.metmuseum.org/policies/image-resources"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >CC0 — dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong
+                                >Trabajadores portuarios bajo la luz de la Luna
+                                — Joseph Mallord William Turner.</strong
+                            >
+                            Joseph Mallord William Turner, Widener Collection,
+                            1942.9.86. National Gallery of Art Open Access.
+                            <a
+                                title="Condiciones de uso: Trabajadores portuarios bajo la luz de la Luna"
+                                href="https://www.nga.gov/artworks/free-images-and-open-access"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong>Luz de Luna — Claude-Joseph Vernet.</strong>
+                            Claude-Joseph Vernet, 2018.13.1. National Gallery of
+                            Art Open Access.
+                            <a
+                                title="Condiciones de uso: Luz de Luna"
+                                href="https://www.nga.gov/artworks/free-images-and-open-access"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong
+                                >Luz de Luna sobre el río Yare — John
+                                Crome.</strong
+                            >
+                            John Crome, Paul Mellon Collection, 1983.1.39.
+                            National Gallery of Art Open Access.
+                            <a
+                                title="Condiciones de uso: Luz de Luna sobre el río Yare"
+                                href="https://www.nga.gov/artworks/free-images-and-open-access"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong
+                                >Rahu, el demonio de los eclipses — Artista
+                                jemer no identificado.</strong
+                            >
+                            LACMA, The Michael J. Connell Fund, M.75.105. Foto ©
+                            Museum Associates / LACMA; reproducción ofrecida
+                            como dominio público.
+                            <a
+                                title="Condiciones de uso: Rahu, el demonio de los eclipses"
+                                href="https://www.lacma.org/about/contact-us/terms-use"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong
+                                >Eclipse solar — Howard Russell Butler.</strong
+                            >
+                            Princeton University, gift of H. Russell Butler Jr.,
+                            PP357.
+                            <a
+                                title="Condiciones de uso: Eclipse solar"
+                                href="https://artmuseum.princeton.edu/art/collections/objects/44715"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong
+                                >Eclipse solar, Lompoc 1923 — Howard Russell
+                                Butler.</strong
+                            >
+                            Princeton University, gift of H. Russell Butler Jr.,
+                            PP351.
+                            <a
+                                title="Condiciones de uso: Eclipse solar, Lompoc 1923"
+                                href="https://artmuseum.princeton.edu/art/collections/objects/45428"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Dominio público</a
+                            >.
+                        </li>
+                        <li>
+                            <strong
+                                >Un eclipse visto desde la Luna — Vincent
+                                Brooks, Day &amp; Son, según un dibujo de James
+                                Nasmyth.</strong
+                            >
+                            Rijksmuseum; reproducción de Public Domain Image
+                            Archive / The Public Domain Review.
+                            <a
+                                title="Condiciones de uso: Un eclipse visto desde la Luna"
+                                href="https://pdimagearchive.org/images/eb557628-12a4-4752-a547-a8d240340089/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >CC0 — dominio público</a
+                            >.
+                        </li>
+                    </ol>
+                </details>
+            </section>
+        </main>
+        <a class="back-to-top" href="#top" hidden>Volver arriba ↑</a>
+        <footer>
+            <p>El cielo en los mitos y el arte · Julián Cavallo · UAI · 2026</p>
+        </footer>
+    </body>
 </html>

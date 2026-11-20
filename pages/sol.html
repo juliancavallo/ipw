@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <script>
+            // Aplicar el tema guardado antes del primer renderizado.
+            try {
+                document.documentElement.dataset.theme =
+                    localStorage.getItem('cielo-theme') === 'dark' ? 'dark' : 'light';
+            } catch {
+                // Conservar el tema claro si el almacenamiento está bloqueado.
+            }
+        </script>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="author" content="Julián Cavallo" />
+        <meta
+            name="description"
+            content="Relatos sobre el Sol y obras que representan el astro y sus efectos."
+        />
+        <meta name="keywords" content="mitología, Sol, Luna, eclipses, arte" />
+        <title>Sol · El cielo en los mitos y el arte</title>
+        <link
+            rel="icon"
+            href="../assets/images/cielo-icono.svg"
+            type="image/svg+xml"
+        />
+        <link rel="stylesheet" href="../assets/css/styles.css" />
+        <link rel="stylesheet" href="../assets/css/cielo.css" />
+        <script src="../assets/js/app.js" defer></script>
+    </head>
+    <body id="top" class="sky-page">
+        <a class="skip-link" href="#contenido" title="Saltar al contenido"
+            >Saltar al contenido</a
+        >
+        <header>
+            <nav class="navbar" aria-label="Navegación principal">
+                <a
+                    class="nav-subtitle"
+                    href="../index.html"
+                    title="El cielo en los mitos y el arte"
+                    >El cielo en los mitos y el arte</a
+                >
+                <div class="nav-actions">
+                    <button
+                        class="nav-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        hidden
+                    >
+                        Menú
+                    </button>
+                    <button
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Alternar entre tema claro y oscuro"
+                        title="Alternar tema"
+                        aria-pressed="false"
+                        hidden
+                    >
+                        <span
+                            class="theme-icon theme-icon-sun"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                            >
+                                <circle cx="12" cy="12" r="4" />
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+                                />
+                            </svg>
+                        </span>
+                        <span
+                            class="theme-icon theme-icon-moon"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M20.4 15.5A8.5 8.5 0 0 1 8.5 3.6 8.5 8.5 0 1 0 20.4 15.5Z"
+                                />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <ul class="nav-list" id="primary-navigation">
+                    <li class="nav-item">
+                        <a href="../index.html" title="Inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sol.html" title="Sol" aria-current="page"
+                            >Sol</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="luna.html" title="Luna">Luna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="eclipses.html" title="Eclipses">Eclipses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="culturas.html" title="El cielo en las culturas"
+                            >Culturas</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="glosario.html" title="Glosario">Glosario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#actividad" title="Actividad"
+                            >Actividad</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#fuentes" title="Fuentes"
+                            >Fuentes</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="contenido">
+            <section
+                id="sol"
+                class="story-section"
+                aria-labelledby="sol-titulo"
+            >
+                <div class="chapter-heading">
+                    <div>
+                        <p class="eyebrow">El Sol</p>
+                        <h1 id="sol-titulo">Relatos sobre el Sol</h1>
+                        <p>
+                            El Sol aparece en distintas culturas como una
+                            divinidad y como un elemento central del orden del
+                            mundo. Su luz y su calor sostienen la vida y
+                            organizan actividades cotidianas, por lo que muchas
+                            comunidades relacionaron su presencia con la
+                            <strong>fertilidad</strong> y la
+                            <strong>prosperidad</strong>.
+                        </p>
+                        <p>
+                            El recorrido aparente del Sol también permitió
+                            reconocer el paso del día y de las estaciones. Por
+                            eso, su observación fue importante para crear
+                            <strong>calendarios</strong> y establecer momentos
+                            adecuados para las tareas agrícolas y las
+                            ceremonias.
+                        </p>
+                    </div>
+                    <figure class="chapter-print">
+                        <img
+                            src="../assets/images/ilustraciones/sol-xilografia.jpg"
+                            width="1100"
+                            height="1100"
+                            loading="lazy"
+                            alt="Sol sobre un horizonte, ilustrado como grabado."
+                        />
+                    </figure>
+                </div>
+                <div class="story-grid">
+                    <article class="story" id="faeton">
+                        <p class="eyebrow">Tradición grecorromana</p>
+                        <h2>Faetón y el carro del Sol</h2>
+                        <p>
+                            Faetón pide conducir el carro solar para demostrar
+                            que es hijo del dios. Aunque recibe advertencias, su
+                            padre acaba permitiéndoselo. Los caballos se
+                            desvían, el carro se acerca demasiado a la Tierra y
+                            causa destrucción. Júpiter detiene el desastre con
+                            un rayo. Esta versión se basa en las
+                            <cite>Metamorfosis</cite> de Ovidio.
+                        </p>
+                        <p class="reading-key">
+                            <strong>Para observar:</strong> ¿qué representa el
+                            riesgo de conducir el carro?
+                        </p>
+                        <a
+                            href="https://www.nga.gov/artworks/71349-fall-phaeton"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="National Gallery of Art: contexto de Faetón"
+                            >National Gallery of Art: contexto de Faetón ↗</a
+                        >
+                    </article>
+                    <article class="story" id="amaterasu">
+                        <p class="eyebrow">Tradición japonesa · Sintoísmo</p>
+                        <h2>Amaterasu y la cueva</h2>
+                        <p>
+                            Después de los actos violentos de su hermano
+                            Susanoo, Amaterasu se oculta en una cueva. El mundo
+                            queda a oscuras y los demás dioses preparan una
+                            reunión para hacerla salir. Ame-no-Uzume danza y
+                            provoca risas; el ruido despierta la curiosidad de
+                            Amaterasu. Su regreso trae de vuelta la luz. Los
+                            relatos del
+                            <cite>Kojiki</cite> y sus variantes presentan
+                            detalles distintos.
+                        </p>
+                        <p class="reading-key">
+                            <strong>Para observar:</strong> ¿qué papel
+                            desempeñan los demás dioses?
+                        </p>
+                        <a
+                            href="https://d-museum.kokugakuin.ac.jp/eos/detail/?id=9440"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Universidad Kokugakuin: Amaterasu"
+                            >Universidad Kokugakuin: Amaterasu ↗</a
+                        >
+                    </article>
+                </div>
+                <a class="chapter-next" href="#arte-sol" title="Ver las obras ↓"
+                    >Ver las obras ↓</a
+                >
+            </section>
+            <section
+                id="arte-sol"
+                class="directory sky-gallery"
+                aria-labelledby="arte-sol-titulo"
+            >
+                <p class="eyebrow">Galería</p>
+                <h2 id="arte-sol-titulo">El Sol en el arte</h2>
+                <p>
+                    Cuatro obras de distintas épocas y culturas relacionadas con
+                    el Sol y la luz solar.
+                </p>
+                <div class="sky-art-grid" data-gallery="sol">
+                    <article class="sky-art" id="obra-disco-solar-peru">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/disco-solar-peru.webp"
+                                title="Ampliar Disco solar"
+                                aria-label="Ampliar Disco solar, Artista no identificado"
+                                ><img
+                                    src="../assets/images/obras-cielo/disco-solar-peru.webp"
+                                    width="1200"
+                                    height="1080"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Disco dorado con rostro humano central y una corona de rayos ondulados."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>
+                                Artista no identificado · Posterior al siglo XVI
+                            </figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Disco solar</h3>
+                            <p>
+                                <strong>Qué observar.</strong> Un rostro rodeado
+                                por rayos convierte al Sol en una presencia
+                                humana. La superficie dorada también trabaja con
+                                la luz: el astro se representa tanto mediante su
+                                forma como mediante el brillo del material. La
+                                ficha del museo sitúa esta pieza en época
+                                colonial.
+                            </p>
+                            <p class="art-credit-line">
+                                Perú, época colonial · plata martillada y dorada
+                                · The Met, Nueva York
+                            </p>
+                            <a
+                                title="Consultar Disco solar"
+                                aria-label="Consultar la obra y su contexto: Disco solar"
+                                class="art-source"
+                                href="https://www.metmuseum.org/art/collection/search/309286"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                    <article class="sky-art" id="obra-grulla-sol">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/grulla-sol.webp"
+                                title="Ampliar Grulla y Sol"
+                                aria-label="Ampliar Grulla y Sol, Escuela de Hokusai"
+                                ><img
+                                    src="../assets/images/obras-cielo/grulla-sol.webp"
+                                    width="1600"
+                                    height="1179"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Grulla en vuelo ante un disco solar parcialmente velado por bandas horizontales de nubes."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>
+                                Escuela de Hokusai · Siglo XIX
+                            </figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Grulla y Sol</h3>
+                            <p>
+                                <strong>Qué observar.</strong> El disco solar se
+                                recorta detrás de la grulla y las franjas de
+                                nubes. La economía de colores concentra la
+                                atención en el contraste entre el círculo
+                                inmóvil y las alas extendidas. Una forma
+                                sencilla alcanza para hacer reconocible al Sol.
+                            </p>
+                            <p class="art-credit-line">
+                                Japón · tinta y acuarela sobre papel · The Met,
+                                Nueva York
+                            </p>
+                            <a
+                                title="Consultar Grulla y Sol"
+                                aria-label="Consultar la obra y su contexto: Grulla y Sol"
+                                class="art-source"
+                                href="https://www.metmuseum.org/art/collection/search/57240"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                    <article class="sky-art" id="obra-inness-amanecer">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/inness-amanecer.webp"
+                                title="Ampliar Amanecer"
+                                aria-label="Ampliar Amanecer, George Inness"
+                                ><img
+                                    src="../assets/images/obras-cielo/inness-amanecer.webp"
+                                    width="1600"
+                                    height="1063"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Paisaje campestre al amanecer, con árboles oscuros y una luz amarilla y anaranjada entre la bruma."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>George Inness · 1887</figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Amanecer</h3>
+                            <p>
+                                <strong>Qué observar.</strong> Aquí el Sol
+                                aparece a través de sus efectos: el resplandor
+                                cálido atraviesa la bruma y transforma el campo.
+                                Observá cómo los árboles oscuros recortan el
+                                cielo iluminado y cómo la luz organiza la
+                                profundidad del paisaje.
+                            </p>
+                            <p class="art-credit-line">
+                                Estados Unidos · óleo sobre lienzo · The Met,
+                                Nueva York
+                            </p>
+                            <a
+                                title="Consultar Amanecer"
+                                aria-label="Consultar la obra y su contexto: Amanecer"
+                                class="art-source"
+                                href="https://www.metmuseum.org/art/collection/search/11235"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                    <article class="sky-art" id="obra-surya-de-pie">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/turner-sun-vapour.webp"
+                                title="Ampliar El Sol saliendo entre la bruma"
+                                aria-label="Ampliar El Sol saliendo entre la bruma, Joseph Mallord William Turner"
+                                ><img
+                                    src="../assets/images/obras-cielo/turner-sun-vapour.webp"
+                                    width="1600"
+                                    height="1180"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Amanecer brumoso sobre una costa con pescadores, barcos y el Sol reflejado en el mar."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>
+                                Joseph Mallord William Turner · Antes de 1807
+                            </figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>El Sol saliendo entre la bruma</h3>
+                            <p>
+                                <strong>Qué observar.</strong> Turner sitúa el
+                                Sol bajo en el horizonte, entre la bruma marina.
+                                La luz reflejada en el agua y las siluetas de
+                                los barcos muestran un paisaje de amanecer
+                                propio del Romanticismo.
+                            </p>
+                            <p class="art-credit-line">
+                                Inglaterra · óleo sobre lienzo · National
+                                Gallery, Londres
+                            </p>
+                            <a
+                                title="Consultar El Sol saliendo entre la bruma"
+                                aria-label="Consultar la obra y su contexto: El Sol saliendo entre la bruma"
+                                class="art-source"
+                                href="https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-sun-rising-through-vapour"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <a class="back-to-top" href="#top" hidden>Volver arriba ↑</a>
+        <footer>
+            <p>El cielo en los mitos y el arte · Julián Cavallo · UAI · 2026</p>
+        </footer>
+        <dialog id="art-dialog" aria-labelledby="dialog-title">
+            <div class="dialog-toolbar">
+                <p id="dialog-position"></p>
+                <button id="close-dialog" type="button" autofocus>
+                    Cerrar
+                </button>
+            </div>
+            <h2 id="dialog-title"></h2>
+            <img
+                id="dialog-image"
+                src="../assets/images/obras-cielo/disco-solar-peru.webp"
+                alt="Disco solar dorado con rostro humano y rayos ondulados."
+            />
+            <p id="dialog-caption"></p>
+            <div class="dialog-navigation">
+                <button id="previous-art" type="button">← Anterior</button
+                ><a
+                    id="dialog-source"
+                    href="https://www.metmuseum.org/art/collection/search/309286"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Consultar obra"
+                    >Consultar obra ↗</a
+                ><button id="next-art" type="button">Siguiente →</button>
+            </div>
+        </dialog>
+    </body>
+</html>

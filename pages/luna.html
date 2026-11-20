@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <script>
+            // Aplicar el tema guardado antes del primer renderizado.
+            try {
+                document.documentElement.dataset.theme =
+                    localStorage.getItem('cielo-theme') === 'dark' ? 'dark' : 'light';
+            } catch {
+                // Conservar el tema claro si el almacenamiento está bloqueado.
+            }
+        </script>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="author" content="Julián Cavallo" />
+        <meta
+            name="description"
+            content="Relatos sobre la Luna y obras con imágenes lunares y escenas nocturnas."
+        />
+        <meta name="keywords" content="mitología, Sol, Luna, eclipses, arte" />
+        <title>Luna · El cielo en los mitos y el arte</title>
+        <link
+            rel="icon"
+            href="../assets/images/cielo-icono.svg"
+            type="image/svg+xml"
+        />
+        <link rel="stylesheet" href="../assets/css/styles.css" />
+        <link rel="stylesheet" href="../assets/css/cielo.css" />
+        <script src="../assets/js/app.js" defer></script>
+    </head>
+    <body id="top" class="sky-page">
+        <a class="skip-link" href="#contenido" title="Saltar al contenido"
+            >Saltar al contenido</a
+        >
+        <header>
+            <nav class="navbar" aria-label="Navegación principal">
+                <a
+                    class="nav-subtitle"
+                    href="../index.html"
+                    title="El cielo en los mitos y el arte"
+                    >El cielo en los mitos y el arte</a
+                >
+                <div class="nav-actions">
+                    <button
+                        class="nav-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        hidden
+                    >
+                        Menú
+                    </button>
+                    <button
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Alternar entre tema claro y oscuro"
+                        title="Alternar tema"
+                        aria-pressed="false"
+                        hidden
+                    >
+                        <span
+                            class="theme-icon theme-icon-sun"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                            >
+                                <circle cx="12" cy="12" r="4" />
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+                                />
+                            </svg>
+                        </span>
+                        <span
+                            class="theme-icon theme-icon-moon"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M20.4 15.5A8.5 8.5 0 0 1 8.5 3.6 8.5 8.5 0 1 0 20.4 15.5Z"
+                                />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <ul class="nav-list" id="primary-navigation">
+                    <li class="nav-item">
+                        <a href="../index.html" title="Inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sol.html" title="Sol">Sol</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="luna.html" title="Luna" aria-current="page"
+                            >Luna</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="eclipses.html" title="Eclipses">Eclipses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="culturas.html" title="El cielo en las culturas"
+                            >Culturas</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="glosario.html" title="Glosario">Glosario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#actividad" title="Actividad"
+                            >Actividad</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#fuentes" title="Fuentes"
+                            >Fuentes</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="contenido">
+            <section
+                id="luna"
+                class="story-section"
+                aria-labelledby="luna-titulo"
+            >
+                <div class="chapter-heading">
+                    <div>
+                        <p class="eyebrow">La Luna</p>
+                        <h1 id="luna-titulo">Relatos sobre la Luna</h1>
+                        <p>
+                            La Luna cambia de aspecto a lo largo de un ciclo
+                            visible. Sus
+                            <strong>fases</strong> ofrecieron a distintas
+                            sociedades una referencia para medir el tiempo y
+                            organizar calendarios, actividades agrícolas y
+                            celebraciones.
+                        </p>
+                        <p>
+                            En algunas culturas, la Luna fue concebida como una
+                            divinidad o como una presencia vinculada con la
+                            noche, las aguas y la fertilidad. Sus significados y
+                            representaciones variaron según cada comunidad y su
+                            forma de comprender el mundo natural.
+                        </p>
+                    </div>
+                    <figure class="chapter-print">
+                        <img
+                            src="../assets/images/ilustraciones/luna-xilografia.jpg"
+                            width="1100"
+                            height="1100"
+                            loading="lazy"
+                            alt="Luna creciente y estrellas en estilo de grabado."
+                        />
+                    </figure>
+                </div>
+                <div class="story-grid">
+                    <article class="story" id="selene">
+                        <p class="eyebrow">Tradición griega</p>
+                        <h2>Selene y Endimión</h2>
+                        <p>
+                            Selene, diosa de la Luna, ama al pastor Endimión. En
+                            una versión del relato, él conserva su juventud
+                            mientras duerme eternamente. Selene lo visita por la
+                            noche. Un sarcófago romano conservado en The Met
+                            representa ese encuentro junto con otras figuras. La
+                            fuente enlazada permite conocer esa obra y su
+                            contexto funerario; la galería de esta página
+                            propone observar otros modos de representar la luz
+                            de la Luna.
+                        </p>
+                        <p class="reading-key">
+                            <strong>Para observar:</strong> ¿cómo cambia el
+                            paisaje cuando lo ilumina la Luna?
+                        </p>
+                        <a
+                            href="https://www.metmuseum.org/art/collection/search/254590"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="The Met: sarcófago de Selene y Endimión"
+                            >The Met: sarcófago de Selene y Endimión ↗</a
+                        >
+                    </article>
+                    <article class="story" id="change">
+                        <p class="eyebrow">Tradición china</p>
+                        <h2>Chang’e y el elixir</h2>
+                        <p>
+                            Chang’e bebe un elixir de inmortalidad y asciende a
+                            la Luna. En la versión asociada a la estampa de
+                            Yoshitoshi, toma el elixir que estaba destinado a su
+                            esposo Hou Yi. La historia aparece en versiones
+                            diferentes. La fuente enlazada presenta esa estampa
+                            japonesa. En la galería de esta página, los paisajes
+                            permiten comparar otras formas de representar la
+                            Luna, sin ilustrar directamente este relato.
+                        </p>
+                        <p class="reading-key">
+                            <strong>Para observar:</strong> ¿qué diferencias hay
+                            entre imaginar la Luna como destino de un personaje
+                            y representarla en un paisaje?
+                        </p>
+                        <a
+                            href="https://pages.uoregon.edu/jsmacollections/home/artists/yoshitoshi-tsukioka-1839---1892-/chang-e-flees-to-the-moon.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Colección Lavenberg: Chang’e en Yoshitoshi"
+                            >Colección Lavenberg: Chang’e en Yoshitoshi ↗</a
+                        >
+                    </article>
+                </div>
+                <a
+                    class="chapter-next"
+                    href="#arte-luna"
+                    title="Ver las obras ↓"
+                    >Ver las obras ↓</a
+                >
+            </section>
+            <section
+                id="arte-luna"
+                class="directory sky-gallery"
+                aria-labelledby="arte-luna-titulo"
+            >
+                <p class="eyebrow">Galería</p>
+                <h2 id="arte-luna-titulo">La Luna en el arte</h2>
+                <p>
+                    Cuatro obras con imágenes lunares, escenas nocturnas y
+                    símbolos asociados a la Luna.
+                </p>
+                <div class="sky-art-grid" data-gallery="luna">
+                    <article class="sky-art" id="obra-rosetsu-paisaje-lunar">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/rosetsu-paisaje-lunar.webp"
+                                title="Ampliar Paisaje a la luz de la Luna"
+                                aria-label="Ampliar Paisaje a la luz de la Luna, Nagasawa Rosetsu"
+                                ><img
+                                    src="../assets/images/obras-cielo/rosetsu-paisaje-lunar.webp"
+                                    width="752"
+                                    height="1600"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Rollo vertical con una gran Luna clara entre nubes, montañas y siluetas de pinos dibujadas en tinta."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>
+                                Nagasawa Rosetsu · 1794–1795
+                            </figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Paisaje a la luz de la Luna</h3>
+                            <p>
+                                <strong>Qué observar.</strong> La Luna se forma
+                                dejando una zona clara entre las aguadas de
+                                tinta. Las nubes y las siluetas de los pinos
+                                refuerzan su luminosidad. Mirá cómo Rosetsu
+                                construye una noche atmosférica con muy pocos
+                                tonos.
+                            </p>
+                            <p class="art-credit-line">
+                                Japón · tinta sobre seda · The Met, Nueva York
+                            </p>
+                            <a
+                                title="Consultar Paisaje a la luz de la Luna"
+                                aria-label="Consultar la obra y su contexto: Paisaje a la luz de la Luna"
+                                class="art-source"
+                                href="https://www.metmuseum.org/art/collection/search/845805"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                    <article
+                        class="sky-art"
+                        id="obra-friedrich-contemplan-luna"
+                    >
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/turner-keelmen-moonlight.webp"
+                                title="Ampliar Trabajadores portuarios bajo la luz de la Luna"
+                                aria-label="Ampliar Trabajadores portuarios bajo la luz de la Luna, Joseph Mallord William Turner"
+                                ><img
+                                    src="../assets/images/obras-cielo/turner-keelmen-moonlight.webp"
+                                    width="1600"
+                                    height="1188"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Barcos y trabajadores cargan carbón bajo un cielo nocturno iluminado por la Luna y el fuego."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>
+                                Joseph Mallord William Turner · 1835
+                            </figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>
+                                Trabajadores portuarios bajo la luz de la Luna
+                            </h3>
+                            <p>
+                                <strong>Qué observar.</strong> La Luna ilumina
+                                el río Tyne y contrasta con las antorchas de los
+                                trabajadores que cargan carbón en barcos. Turner
+                                utiliza la luz y el color para construir una
+                                escena nocturna de la era industrial.
+                            </p>
+                            <p class="art-credit-line">
+                                Inglaterra · óleo sobre lienzo · National
+                                Gallery of Art, Washington
+                            </p>
+                            <a
+                                title="Consultar Trabajadores portuarios bajo la luz de la Luna"
+                                aria-label="Consultar la obra y su contexto: Trabajadores portuarios bajo la luz de la Luna"
+                                class="art-source"
+                                href="https://www.nga.gov/artworks/1225-keelmen-heaving-coals-moonlight"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                    <article class="sky-art" id="obra-conejo-mira-luna">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/vernet-moonlight.webp"
+                                title="Ampliar Luz de Luna"
+                                aria-label="Ampliar Luz de Luna, Claude-Joseph Vernet"
+                                ><img
+                                    src="../assets/images/obras-cielo/vernet-moonlight.webp"
+                                    width="1600"
+                                    height="1112"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Luna llena entre nubes sobre barcos y una costa rocosa iluminada por su reflejo en el agua."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>Claude-Joseph Vernet · 1772</figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Luz de Luna</h3>
+                            <p>
+                                <strong>Qué observar.</strong> La Luna y su
+                                reflejo iluminan el mar, los barcos y la costa.
+                                Vernet organiza la escena con contrastes entre
+                                la luz lunar fría y las luces cálidas de la
+                                costa.
+                            </p>
+                            <p class="art-credit-line">
+                                Francia · óleo sobre lienzo · National Gallery
+                                of Art, Washington
+                            </p>
+                            <a
+                                title="Consultar Luz de Luna"
+                                aria-label="Consultar la obra y su contexto: Luz de Luna"
+                                class="art-source"
+                                href="https://www.nga.gov/artworks/214332-moonlight"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                    <article class="sky-art" id="obra-conejos-entre-nubes">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/crome-moonlight-yare.webp"
+                                title="Ampliar Luz de Luna sobre el río Yare"
+                                aria-label="Ampliar Luz de Luna sobre el río Yare, John Crome"
+                                ><img
+                                    src="../assets/images/obras-cielo/crome-moonlight-yare.webp"
+                                    width="1600"
+                                    height="1244"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Molinos iluminados por la Luna junto a un río, con un gran árbol en primer plano."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>John Crome · ca. 1816–1817</figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Luz de Luna sobre el río Yare</h3>
+                            <p>
+                                <strong>Qué observar.</strong> La luz de la Luna
+                                recorta dos molinos y se refleja en el río Yare.
+                                Las pinceladas sueltas y la atención al paisaje
+                                sitúan la obra en la tradición romántica
+                                británica.
+                            </p>
+                            <p class="art-credit-line">
+                                Inglaterra · óleo sobre lienzo · National
+                                Gallery of Art, Washington
+                            </p>
+                            <a
+                                title="Consultar Luz de Luna sobre el río Yare"
+                                aria-label="Consultar la obra y su contexto: Luz de Luna sobre el río Yare"
+                                class="art-source"
+                                href="https://www.nga.gov/artworks/61389-moonlight-yare"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <a class="back-to-top" href="#top" hidden>Volver arriba ↑</a>
+        <footer>
+            <p>El cielo en los mitos y el arte · Julián Cavallo · UAI · 2026</p>
+        </footer>
+        <dialog id="art-dialog" aria-labelledby="dialog-title">
+            <div class="dialog-toolbar">
+                <p id="dialog-position"></p>
+                <button id="close-dialog" type="button" autofocus>
+                    Cerrar
+                </button>
+            </div>
+            <h2 id="dialog-title"></h2>
+            <img
+                id="dialog-image"
+                src="../assets/images/obras-cielo/disco-solar-peru.webp"
+                alt="Disco solar dorado con rostro humano y rayos ondulados."
+            />
+            <p id="dialog-caption"></p>
+            <div class="dialog-navigation">
+                <button id="previous-art" type="button">← Anterior</button
+                ><a
+                    id="dialog-source"
+                    href="https://www.metmuseum.org/art/collection/search/309286"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Consultar obra"
+                    >Consultar obra ↗</a
+                ><button id="next-art" type="button">Siguiente →</button>
+            </div>
+        </dialog>
+    </body>
+</html>

@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <script>
+            // Aplicar el tema guardado antes del primer renderizado.
+            try {
+                document.documentElement.dataset.theme =
+                    localStorage.getItem('cielo-theme') === 'dark' ? 'dark' : 'light';
+            } catch {
+                // Conservar el tema claro si el almacenamiento está bloqueado.
+            }
+        </script>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="author" content="Julián Cavallo" />
+        <meta
+            name="description"
+            content="Relatos, explicación astronómica interactiva y obras sobre eclipses."
+        />
+        <meta name="keywords" content="mitología, Sol, Luna, eclipses, arte" />
+        <title>Eclipses · El cielo en los mitos y el arte</title>
+        <link
+            rel="icon"
+            href="../assets/images/cielo-icono.svg"
+            type="image/svg+xml"
+        />
+        <link rel="stylesheet" href="../assets/css/styles.css" />
+        <link rel="stylesheet" href="../assets/css/cielo.css" />
+        <script src="../assets/js/app.js" defer></script>
+    </head>
+    <body id="top" class="sky-page">
+        <a class="skip-link" href="#contenido" title="Saltar al contenido"
+            >Saltar al contenido</a
+        >
+        <header>
+            <nav class="navbar" aria-label="Navegación principal">
+                <a
+                    class="nav-subtitle"
+                    href="../index.html"
+                    title="El cielo en los mitos y el arte"
+                    >El cielo en los mitos y el arte</a
+                >
+                <div class="nav-actions">
+                    <button
+                        class="nav-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="primary-navigation"
+                        hidden
+                    >
+                        Menú
+                    </button>
+                    <button
+                        class="theme-toggle"
+                        type="button"
+                        aria-label="Alternar entre tema claro y oscuro"
+                        title="Alternar tema"
+                        aria-pressed="false"
+                        hidden
+                    >
+                        <span
+                            class="theme-icon theme-icon-sun"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                            >
+                                <circle cx="12" cy="12" r="4" />
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+                                />
+                            </svg>
+                        </span>
+                        <span
+                            class="theme-icon theme-icon-moon"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M20.4 15.5A8.5 8.5 0 0 1 8.5 3.6 8.5 8.5 0 1 0 20.4 15.5Z"
+                                />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <ul class="nav-list" id="primary-navigation">
+                    <li class="nav-item">
+                        <a href="../index.html" title="Inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sol.html" title="Sol">Sol</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="luna.html" title="Luna">Luna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="eclipses.html"
+                            title="Eclipses"
+                            aria-current="page"
+                            >Eclipses</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="culturas.html" title="El cielo en las culturas"
+                            >Culturas</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="glosario.html" title="Glosario">Glosario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#actividad" title="Actividad"
+                            >Actividad</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#fuentes" title="Fuentes"
+                            >Fuentes</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="contenido">
+            <section
+                id="eclipses"
+                class="story-section"
+                aria-labelledby="eclipses-titulo"
+            >
+                <div class="chapter-heading">
+                    <div>
+                        <p class="eyebrow">Los eclipses</p>
+                        <h1 id="eclipses-titulo">
+                            Relatos e imágenes de eclipses
+                        </h1>
+                        <p>
+                            Un eclipse modifica por un tiempo breve la
+                            apariencia del Sol o de la Luna. La oscuridad en
+                            pleno día o el cambio visible del disco lunar
+                            hicieron de estos fenómenos momentos destacados en
+                            la observación del cielo.
+                        </p>
+                        <p>
+                            Las sociedades buscaron comprender cuándo ocurrían
+                            mediante registros y observaciones. Sus
+                            interpretaciones variaron: para algunas culturas
+                            podían señalar un cambio o un desequilibrio,
+                            mientras que los conocimientos astronómicos
+                            permitieron reconocer sus ciclos y anticipar su
+                            aparición.
+                        </p>
+                    </div>
+                    <figure class="chapter-print">
+                        <img
+                            src="../assets/images/ilustraciones/eclipse-xilografia.png"
+                            width="1100"
+                            height="1100"
+                            loading="lazy"
+                            alt="Eclipse solar total: el disco oscuro de la Luna cubre el Sol y deja visible su corona luminosa."
+                        />
+                    </figure>
+                </div>
+                <div class="story-grid">
+                    <article class="story" id="rahu">
+                        <p class="eyebrow">Tradición hindú</p>
+                        <h2>Rahu y los astros devorados</h2>
+                        <p>
+                            Durante la obtención del néctar de inmortalidad, un
+                            ser se infiltra entre los dioses para beberlo. El
+                            Sol y la Luna lo delatan. Vishnu lo decapita, pero
+                            la cabeza ya es inmortal y recibe el nombre de Rahu.
+                            Rahu persigue y engulle a los astros, episodio que
+                            se vincula con los eclipses. Las representaciones de
+                            Rahu también aparecen en tradiciones de Asia.
+                        </p>
+                        <p>
+                            <a
+                                href="https://blogs.loc.gov/folklife/2017/08/solar-eclipse-awe-wonder-and-belief/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Biblioteca del Congreso: relatos de eclipses"
+                                >Biblioteca del Congreso: relatos de eclipses
+                                ↗</a
+                            >
+                        </p>
+                    </article>
+                    <article class="story" id="dragon">
+                        <p class="eyebrow">Relatos chinos</p>
+                        <h2>El dragón que devora el Sol</h2>
+                        <p>
+                            En algunos relatos chinos, un dragón intenta comerse
+                            el Sol durante un eclipse. La gente hace ruido y
+                            golpea gongs para ahuyentarlo. También se cuenta que
+                            un perro celestial llamado Tiangou persigue al Sol.
+                            Estos relatos coexistieron con observaciones y
+                            cálculos astronómicos.
+                        </p>
+                        <p>
+                            <a
+                                href="https://idp.bl.uk/discover/learning/chinese-astronomy/articles/the-chinese-sky/the-sun-and-moon/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="British Library: astronomía china"
+                                >British Library: astronomía china ↗</a
+                            >
+                        </p>
+                    </article>
+                </div>
+                <div class="eclipse-explainer">
+                    <div>
+                        <p class="eyebrow">Astronomía</p>
+                        <h2>Cómo se alinean los astros</h2>
+                        <p>
+                            En un eclipse solar, la Luna pasa entre el Sol y la
+                            Tierra. En uno lunar, la Tierra pasa entre el Sol y
+                            la Luna y su sombra alcanza la Luna.
+                        </p>
+                        <div class="eclipse-controls" hidden>
+                            <button
+                                type="button"
+                                data-eclipse="solar"
+                                aria-pressed="true"
+                            >
+                                Eclipse solar</button
+                            ><button
+                                type="button"
+                                data-eclipse="lunar"
+                                aria-pressed="false"
+                            >
+                                Eclipse lunar
+                            </button>
+                        </div>
+                        <p id="eclipse-description" role="status">
+                            Solar: Sol → Luna → Tierra.
+                        </p>
+                        <a
+                            href="https://science.nasa.gov/eclipses/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="NASA: eclipses"
+                            >NASA: eclipses ↗</a
+                        >
+                    </div>
+                    <figure class="eclipse-figure">
+                        <svg
+                            id="eclipse-diagram"
+                            viewbox="0 0 500 230"
+                            role="img"
+                            aria-labelledby="diagram-title diagram-description"
+                        >
+                            <title id="diagram-title">
+                                Alineación de un eclipse solar
+                            </title>
+                            <desc id="diagram-description">
+                                Sol, Luna y Tierra, en ese orden. Esquema sin
+                                escala.
+                            </desc>
+                            <path
+                                class="sun-rays"
+                                d="M85 115 L430 70 L430 160 Z"
+                            ></path>
+                            <circle
+                                class="diagram-sun"
+                                cx="80"
+                                cy="115"
+                                r="46"
+                            ></circle>
+                            <path
+                                id="shadow-cone"
+                                d="M250 95 L430 110 L430 120 L250 135 Z"
+                            ></path>
+                            <circle
+                                id="middle-body"
+                                class="diagram-moon"
+                                cx="250"
+                                cy="115"
+                                r="20"
+                            ></circle>
+                            <circle
+                                id="last-body"
+                                class="diagram-earth"
+                                cx="420"
+                                cy="115"
+                                r="34"
+                            ></circle>
+                            <text x="80" y="190">Sol</text>
+                            <text id="middle-label" x="250" y="190">Luna</text>
+                            <text id="last-label" x="420" y="190">Tierra</text>
+                        </svg>
+                        <figcaption>Esquema sin escala.</figcaption>
+                    </figure>
+                </div>
+                <a
+                    class="chapter-next"
+                    href="#arte-eclipses"
+                    title="Ver las obras ↓"
+                    >Ver las obras ↓</a
+                >
+            </section>
+            <section
+                id="arte-eclipses"
+                class="directory sky-gallery"
+                aria-labelledby="arte-eclipses-titulo"
+            >
+                <p class="eyebrow">Galería</p>
+                <h2 id="arte-eclipses-titulo">Eclipses en las imágenes</h2>
+                <p>
+                    Una escultura vinculada a Rahu, pinturas de eclipses
+                    observados y una ilustración científica ofrecen distintas
+                    aproximaciones al fenómeno.
+                </p>
+                <div class="sky-art-grid" data-gallery="eclipse">
+                    <article class="sky-art" id="obra-rahu">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/rahu.webp"
+                                title="Ampliar Rahu, el demonio de los eclipses"
+                                aria-label="Ampliar Rahu, el demonio de los eclipses, Artista jemer no identificado"
+                                ><img
+                                    src="../assets/images/obras-cielo/rahu.webp"
+                                    width="1106"
+                                    height="1600"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Escultura de piedra de Rahu, con rostro de ojos prominentes y un brazo alzado sobre una base de formas repetidas."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>
+                                Artista jemer no identificado · Siglos X–XI
+                            </figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Rahu, el demonio de los eclipses</h3>
+                            <p>
+                                <strong>Qué observar.</strong> El rostro y el
+                                brazo levantado permiten reconocer a Rahu. Esta
+                                escultura estuvo integrada en un conjunto de
+                                nueve deidades: representa al personaje asociado
+                                a los eclipses, no una observación del fenómeno.
+                            </p>
+                            <p class="art-credit-line">
+                                Camboya; LACMA, Los Ángeles
+                            </p>
+                            <a
+                                title="Consultar Rahu, el demonio de los eclipses"
+                                aria-label="Consultar la obra y su contexto: Rahu, el demonio de los eclipses"
+                                class="art-source"
+                                href="https://collections.lacma.org/object/34869"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                    <article class="sky-art" id="obra-butler-1918">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/butler-1918.webp"
+                                title="Ampliar Eclipse solar"
+                                aria-label="Ampliar Eclipse solar, Howard Russell Butler"
+                                ><img
+                                    src="../assets/images/obras-cielo/butler-1918.webp"
+                                    width="831"
+                                    height="560"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Disco solar eclipsado rodeado de una corona luminosa blanca sobre un cielo azul oscuro y nublado."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>
+                                Howard Russell Butler · 1918
+                            </figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Eclipse solar</h3>
+                            <p>
+                                <strong>Qué observar.</strong> El disco oscuro
+                                deja visible la corona solar. Butler registró el
+                                eclipse observado en Baker, Oregón: aquí la
+                                pintura busca conservar una experiencia de
+                                observación, en lugar de representar a un
+                                personaje mítico.
+                            </p>
+                            <p class="art-credit-line">
+                                Princeton University Art Museum
+                            </p>
+                            <a
+                                title="Consultar Eclipse solar"
+                                aria-label="Consultar la obra y su contexto: Eclipse solar"
+                                class="art-source"
+                                href="https://artmuseum.princeton.edu/art/collections/objects/44715"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                    <article class="sky-art" id="obra-butler-1923">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/butler-1923.webp"
+                                title="Ampliar Eclipse solar, Lompoc 1923"
+                                aria-label="Ampliar Eclipse solar, Lompoc 1923, Howard Russell Butler"
+                                ><img
+                                    src="../assets/images/obras-cielo/butler-1923.webp"
+                                    width="1368"
+                                    height="2000"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Pintura vertical de un eclipse con corona clara y un resplandor amarillo a la derecha, bajo un cielo azul con nubes."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>
+                                Howard Russell Butler · 1923
+                            </figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Eclipse solar, Lompoc 1923</h3>
+                            <p>
+                                <strong>Qué observar.</strong> El formato
+                                vertical permite recorrer el cielo alrededor del
+                                eclipse. Compará el contorno de la corona y las
+                                nubes con el cuadro de 1918: un mismo fenómeno
+                                admite registros visuales distintos.
+                            </p>
+                            <p class="art-credit-line">
+                                Princeton University Art Museum
+                            </p>
+                            <a
+                                title="Consultar Eclipse solar, Lompoc 1923"
+                                aria-label="Consultar la obra y su contexto: Eclipse solar, Lompoc 1923"
+                                class="art-source"
+                                href="https://artmuseum.princeton.edu/art/collections/objects/45428"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                    <article class="sky-art" id="obra-nasmyth-eclipse">
+                        <figure class="art-figure">
+                            <a
+                                class="art-open"
+                                href="../assets/images/obras-cielo/nasmyth-eclipse.webp"
+                                title="Ampliar Un eclipse visto desde la Luna"
+                                aria-label="Ampliar Un eclipse visto desde la Luna, Vincent Brooks, Day &amp; Son, según un dibujo de James Nasmyth"
+                                ><img
+                                    src="../assets/images/obras-cielo/nasmyth-eclipse.webp"
+                                    width="1023"
+                                    height="788"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Lámina con montañas lunares bajo un cielo negro, donde la Tierra oculta al Sol dejando un anillo luminoso rojizo."
+                                /><span aria-hidden="true">Ampliar ↗</span></a
+                            >
+                            <figcaption>
+                                Vincent Brooks, Day &amp; Son, según un dibujo
+                                de James Nasmyth · 1874 (publicación)
+                            </figcaption>
+                        </figure>
+                        <div class="art-body">
+                            <h3>Un eclipse visto desde la Luna</h3>
+                            <p>
+                                <strong>Qué observar.</strong> La lámina imagina
+                                cómo se vería la Tierra ocultando al Sol desde
+                                la superficie lunar. Es una ilustración
+                                científica, no una fotografía tomada en la Luna.
+                                El paisaje permite explorar cómo el arte ayuda a
+                                imaginar otro punto de vista.
+                            </p>
+                            <p class="art-credit-line">
+                                Rijksmuseum, Ámsterdam
+                            </p>
+                            <a
+                                title="Consultar Un eclipse visto desde la Luna"
+                                aria-label="Consultar la obra y su contexto: Un eclipse visto desde la Luna"
+                                class="art-source"
+                                href="https://www.rijksmuseum.nl/en/collection/object/Aspect-of-an-eclipse-of-the-Sun-by-the-Earth-as-it-would-appear-as-seen-from-the-Moon--12c2c0ed297dcad12875b33a5b2dfe23"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Consultar la obra y su contexto ↗</a
+                            >
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <a class="back-to-top" href="#top" hidden>Volver arriba ↑</a>
+        <footer>
+            <p>El cielo en los mitos y el arte · Julián Cavallo · UAI · 2026</p>
+        </footer>
+        <dialog id="art-dialog" aria-labelledby="dialog-title">
+            <div class="dialog-toolbar">
+                <p id="dialog-position"></p>
+                <button id="close-dialog" type="button" autofocus>
+                    Cerrar
+                </button>
+            </div>
+            <h2 id="dialog-title"></h2>
+            <img
+                id="dialog-image"
+                src="../assets/images/obras-cielo/disco-solar-peru.webp"
+                alt="Disco solar dorado con rostro humano y rayos ondulados."
+            />
+            <p id="dialog-caption"></p>
+            <div class="dialog-navigation">
+                <button id="previous-art" type="button">← Anterior</button
+                ><a
+                    id="dialog-source"
+                    href="https://www.metmuseum.org/art/collection/search/309286"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Consultar obra"
+                    >Consultar obra ↗</a
+                ><button id="next-art" type="button">Siguiente →</button>
+            </div>
+        </dialog>
+    </body>
+</html>

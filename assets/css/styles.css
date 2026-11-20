@@ -1,0 +1,205 @@
+/* Colores compartidos por las secciones de la exposición. */
+:root {
+    color-scheme: light;
+    --background-color: #f3ece5;
+    --surface-color: #fffaf6;
+    --dark-surface-color: #342c28;
+    --light-text-color: #342c28;
+    --muted-text-color: #62554f;
+    --accent-color: #853f2d;
+    --gold-color: #853f2d;
+    --border-color: #d8c7bc;
+    --focus-color: #315e68;
+    --surface-hover-color: #f5e7dd;
+    --selection-color: #f0e4db;
+    --frame-color: #eee3db;
+    --separator-color: #c9b5a8;
+    --button-hover-color: #713321;
+    --button-text-color: #fffaf6;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --background-color: #211b18;
+    --surface-color: #302723;
+    --dark-surface-color: #f4e9e0;
+    --light-text-color: #f4e9e0;
+    --muted-text-color: #c6b6aa;
+    --accent-color: #e7a184;
+    --gold-color: #e7a184;
+    --border-color: #5e4b41;
+    --focus-color: #edbb75;
+    --surface-hover-color: #40332d;
+    --selection-color: #49382f;
+    --frame-color: #261f1b;
+    --separator-color: #665247;
+    --button-hover-color: #f0b89e;
+    --button-text-color: #251b16;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background-color);
+    color: var(--dark-surface-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+a {
+    overflow-wrap: anywhere;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 4px;
+}
+
+main {
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+section {
+    scroll-margin-top: 1.5rem;
+}
+
+header {
+    background: var(--background-color);
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1440px;
+    min-height: 4rem;
+    margin: auto;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-subtitle {
+    display: flex;
+    align-items: center;
+    color: var(--light-text-color);
+    text-decoration: none;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .2rem;
+    min-height: 44px;
+    padding: .25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--surface-color);
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background: var(--selection-color);
+}
+
+.theme-icon {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: var(--muted-text-color);
+    transition: background-color .18s ease, color .18s ease;
+}
+
+.theme-icon svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.theme-toggle[aria-pressed="false"] .theme-icon-sun,
+.theme-toggle[aria-pressed="true"] .theme-icon-moon {
+    background: var(--selection-color);
+    color: var(--accent-color);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    font: 1rem/1.5 Arial, sans-serif;
+}
+
+.nav-item a {
+    padding: .6rem .65rem;
+    border-bottom: 1px solid transparent;
+    color: var(--light-text-color);
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    border-bottom-color: var(--gold-color);
+    color: var(--gold-color);
+}
+
+footer {
+    padding: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--light-text-color);
+    font: 1.1rem/1.5 Arial, sans-serif;
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+img {
+    max-width: 100%;
+}
