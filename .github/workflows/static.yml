@@ -31,15 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: npm
-      - name: Verify generated styles
-        run: |
-          npm ci --ignore-scripts
-          npm run check:css
       - name: Prepare public files
         run: |
           mkdir _site

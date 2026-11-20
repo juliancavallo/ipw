@@ -26,14 +26,14 @@
 .sky-page h2 {
     font-size: clamp(2rem, 3.5vw, 2.75rem);
     line-height: 1.15;
-    font-weight: normal;
+    font-weight: 600;
     letter-spacing: -.03em;
     margin: .7rem 0 1.5rem;
 }
 
 .sky-page h3 {
     line-height: 1.25;
-    font-weight: normal;
+    font-weight: 600;
 }
 
 .sky-page .eyebrow {
@@ -52,7 +52,7 @@
 }
 
 .sky-page .nav-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .sky-page .nav-item a[aria-current="page"] {
@@ -131,7 +131,7 @@
 }
 
 .sky-page #inicio .hero-subtitle {
-    font-size: clamp(1.2rem, 2vw, 1.65rem);
+    font-size: clamp(1.4rem, 2vw, 1.75rem);
     line-height: 1.4;
 }
 
@@ -182,7 +182,7 @@
 
 .intro-copy {
     color: var(--muted-text-color);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .route-grid {
@@ -225,7 +225,7 @@
 
 .route p {
     color: var(--muted-text-color);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .route>span:last-child {
@@ -275,7 +275,7 @@
     border-radius: 0;
     box-shadow: none;
     background: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .sky-page .story h2 {
@@ -287,7 +287,7 @@
 .story-section>a,
 .eclipse-explainer a {
     color: var(--accent-color);
-    font-size: 1.05rem;
+    font-size: 1.2rem;
 }
 
 .reading-key {
@@ -306,7 +306,7 @@
 }
 
 .sky-gallery>p:not(.eyebrow) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .sky-art-grid {
@@ -372,7 +372,7 @@
 }
 
 .art-body p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .art-body .art-credit-line {
@@ -393,7 +393,7 @@
     border-top: 1px solid var(--separator-color);
     padding-top: 2rem;
     margin-top: 3rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .sky-page .eclipse-explainer h2 {
@@ -482,7 +482,7 @@
 }
 
 #quiz legend {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding-right: 1rem;
 }
 
@@ -492,7 +492,7 @@
     gap: .7rem;
     padding: .7rem;
     margin-bottom: .25rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     cursor: pointer;
     border-radius: 3px;
 }
@@ -507,7 +507,7 @@
 }
 
 .answer-feedback {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     padding: .8rem 1rem;
     border-left: 3px solid var(--accent-color);
 }
@@ -536,7 +536,7 @@
     margin-top: 1rem;
     border-top: 1px solid var(--border-color);
     padding-top: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--muted-text-color);
 }
 
